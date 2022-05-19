@@ -1,0 +1,166 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: url(wp2254450.jpg) no-repeat center center/cover;
+
+}
+
+.card {
+    position: relative;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    background: #c89595;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.heading {
+    background-color: rgb(198, 56, 56);
+    text-align: center;
+    padding: 13px 0
+}
+
+.heading p {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.names {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.names p {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    /* text-shadow: 5px 5px 5px black; */
+}
+
+input {
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    /* background: black; */
+    color: red;
+    font-weight: bold;
+    font-size: 19px;
+    width: 225px;
+    height: 35px;
+}
+
+input:focus {
+    /* color: white; */
+    text-transform: uppercase;
+}
+
+.names input:focus {
+    outline-color: rgb(255, 255, 255);
+}
+
+.but input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: rgb(255, 140, 159);
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+
+.but {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.but button {
+    font-size: 16px;
+    width: 225px;
+    height: 35px;
+    margin-top: 20px;
+    background: linear-gradient(45deg, #339419, #81ff55);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.but input {
+    padding: unset;
+    border: none;
+    box-shadow: 4px 6px 5px #ff8da1;
+    background: linear-gradient(45deg, pink, white);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: red;
+    font-size: 19px;
+    width: 225px;
+    height: 35px;
+}
+
+.relation {
+    background: linear-gradient(45deg, purple, white);
+}
+
+.relation p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 13px 0;
+}
+
+
+@media screen and (max-width:750.9px) {
+    .card {
+        width: 91%;
+    }
+}
+
+@media screen and (max-width:635.9px) {
+
+    .card {
+        width: 300px;
+    }
+
+    .names {
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .but button{
+        margin-top: 40px;
+    }
+
+    .but input {
+        margin-bottom: 32px;
+    }
+}

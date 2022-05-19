@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part-37 Love Calculator Using </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+        <div class="card">
+            <div class="heading">
+                <p>LOVE CALCULATOR</p>
+            </div>
+            <div class="names">
+                <input type="text" placeholder="YOUR NAME">
+                <p>AND</p>
+                <input type="text" placeholder="LOVE NAME">
+            </div>
+
+            <div class="but">
+                <button onclick="loverperc()">Click</button>
+                <input type="text" id="Show">
+            </div>
+
+            <div class="relation">
+                <p>God Bless Your RelationShip</p>
+            </div>
+        </div>
+
+    <script>
+        function loverperc() {
+            var data = Math.random() * 100;
+            data = Math.floor(data);
+            document.getElementById('Show').value = data + "%";
+        }
+    </script>
+</body>
+
+</html>
