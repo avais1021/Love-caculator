@@ -11,31 +11,67 @@
 
 <body>
 
-        <div class="card">
-            <div class="heading">
-                <p>LOVE CALCULATOR</p>
-            </div>
-            <div class="names">
-                <input type="text" placeholder="YOUR NAME">
-                <p>AND</p>
-                <input type="text" placeholder="LOVE NAME">
-            </div>
-
-            <div class="but">
-                <button onclick="loverperc()">Click</button>
-                <input type="text" id="Show">
-            </div>
-
-            <div class="relation">
-                <p>God Bless Your RelationShip</p>
-            </div>
+    <div class="card">
+        <div class="heading">
+            <p>LOVE CALCULATOR</p>
+        </div>
+        <div class="names">
+            <input type="text" placeholder="YOUR NAME" id="yname">
+            <p>AND</p>
+            <input type="text" placeholder="LOVE NAME" id="lname">
         </div>
 
+        <div class="but">
+            <button onclick="loverperc()">Click</button>
+            <input type="text" id="Show">
+        </div>
+
+        <div class="relation">
+            <p>God Bless Your RelationShip</p>
+        </div>
+    </div>
+
     <script>
+
+
+
         function loverperc() {
-            var data = Math.random() * 100;
-            data = Math.floor(data);
-            document.getElementById('Show').value = data + "%";
+
+            var yourname = document.getElementById('yname').value;
+            var lovename = document.getElementById('lname').value;
+
+            if (yourname == "") {
+                alert('please enter your name');
+            } 
+            // else if (yourname.length <= 2) {
+            //     alert('Min length is 3');
+            // }
+             else if (!isNaN(yourname)) {
+                alert('Numbers are not allowed');
+            }
+
+            else if (lovename == "") {
+                alert('please enter your love name');
+            } 
+            // else if (lovename.length <= 2) {
+            //     alert('Min length is 3');
+            // } 
+            else if (!isNaN(lovename)) {
+                alert('Number are not allowed');
+            } 
+            else {
+                var data = Math.random() * 100;
+                data = Math.floor(data);
+                document.getElementById('Show').value = data + "%";
+            }
+
+
+
+
+
+
+
+
         }
     </script>
 </body>
